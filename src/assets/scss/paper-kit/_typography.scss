@@ -137,7 +137,7 @@ blockquote small{
     font-weight: 100;
     color: rgb(56, 56, 56);
     letter-spacing: 2px;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 0;
 }
 
@@ -168,4 +168,10 @@ blockquote small{
     text-transform: lowercase;
     font-family: $font-custom-1;
     // margin-left: 10px;
+}
+
+
+.bingo-cell {
+    height:"5rem" !important;
+    border: grey 1px;
 }

@@ -22,6 +22,8 @@ import { PrivateRoute } from "support/helpers";
 import LoadingBar from "react-redux-loading-bar";
 import Index from "views/pages/Index";
 import Login from "views/pages/Login";
+import { __ROUTE_BINGO } from "support/helpers/routes";
+import Bingo from "./pages/Bingo";
 
 /**
  * Dummy Component 
@@ -47,22 +49,16 @@ class App extends React.Component {
     return (
       <div>
         {/* Loading bar */}
-        <div style={{ position: "relative", height: "5px", top: 0 }}>
+        {/* <div style={{ position: "relative", height: "5px", top: 0 }}>
           <LoadingBar style={{ backgroundColor: "#f11946", height: "5px" }} />
-        </div>
+        </div> */}
 
         <Router history={history}>
           <Switch>
 
             {/* Public Routes  */}
             <Route exact path="/" render={(props) => <Index {...props} />} />
-            <Route path={__ROUTE_LOGIN} component={Login} />
-
-            {/* Private Route */}
-            <PrivateRoute path={__ROUTE_DASHBOARD} component={Dashboard} {...props} />
-
-            {/* Admin Routes */}
-            {/* <EmployerRoute path={__ROUTE_DASHBOARD} component={Dashboard} {...props}/> */}
+            <Route exact path={__ROUTE_BINGO} render={props => <Bingo {...props} />}  />
           </Switch>
         </Router>
       </div>

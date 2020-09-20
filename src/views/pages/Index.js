@@ -1,58 +1,58 @@
 import React from "react";
-import { Container, Button } from "reactstrap";
+import { Container, Button, Row, Col, } from "reactstrap";
 import { Link } from "react-router-dom";
 
 import { __ROUTE_LOGIN } from "support/helpers";
+import { __ROUTE_BINGO } from "support/helpers/routes";
 
-const Index = () => (
-  <>
-    <div
-      className="page-header index-header"
-      style={{ background: "white", position: "relative" }}
-    >
-      <Tape options={{ fill: "#e8e8e8", position: "absolute", left: "-15%", top: "-20%" }} />
-      <Message options={{ fill: "#e8e8e8", position: "absolute", right: "-1%", bottom: "-2%" }} />
-      <Container style={{ zIndex: 1 }}>
-        <div className="motto">
-          <div>
-            {/* <Icon /> */}
+const Index = () => {
 
-            <span className="text-super">
-              kickstart
-            </span>
+  return (
+    <>
+      <Row style={{ height: '100vh' }}>
+        <Col md="8" style={{ background: '#7ad0f5' }}>
+          <Container style={{ display: 'grid', padding: 100, alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+            <div style={{ width: '30rem' }} >
+              <img src={require('assets/svg/landing.svg')} alt="" srcset="" />
+            </div>
+            <div className="text-center">
+              <span className="h1 text-dark">hey, you Brainy</span>
+            </div>
+          </Container>
+        </Col>
+        <Col md="4" style={{ background: '#' }}>
+          <div style={{ textAlign: 'center', paddingTop: '10rem' }}>
+            <div>
+              {/* <img style={{ width: '80%' }} src={require('assets/svg/landing.svg')} alt="" srcset="" /> */}
+            </div>
+            <div>
+              <span className="text-super" style={{ marginLeft: '11px', marginBottom: '-20px' }}>Happy</span>
+              <br />
+              <span className="text-super" style={{ marginLeft: '0px' }}>bday</span>
+              <br />
+              <span className="text-super text-danger" style={{ marginLeft: '0px' }}>muffin</span>
+            </div>
+            <h3 className="font-for-motto text-center ml-5 mr-5 mt-3">
+              This is only one of your <span className="text-danger">gifts</span>
+              </h3>
+            <small className="mb-4"><span className="text-muted">please dont be made hehe</span></small>
+            <br/>
+            <Link to={__ROUTE_BINGO}>
+              <Button
+                className="btn mr-1 mt-4"
+                color="danger"
+                size="lg"
+                type="button"
+              >
+                <span className="">Do ya wanna give it a try?</span>
+              </Button>
+            </Link>
           </div>
-          <h1 className="font-for-motto text-left">
-            Starter template for <span className="text-danger">React</span> Redux Projects
-          </h1>
-          <h4 className="text-dark mb-5 f-anon">
-            This is the starter template for my hackathons.
-          </h4>
-          <Link to={__ROUTE_LOGIN}>
-            <Button
-              className="btn-round mr-1"
-              color="dark"
-              outline
-              size="lg"
-              type="button"
-            >
-              <span className="text-dark">Login</span>
-            </Button>
-          </Link>
-          <Link to={__ROUTE_LOGIN}>
-            <Button
-              className="btn-round mr-1"
-              color="danger"
-              size="lg"
-              type="button"
-            >
-              <span className="">Dashboard</span>
-            </Button>
-          </Link>
-        </div>
-      </Container>
-    </div>
-  </>
-);
+        </Col>
+      </Row>
+    </>
+  )
+}
 
 const Tape = ({ options }) => (
   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

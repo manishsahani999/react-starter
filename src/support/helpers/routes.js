@@ -5,6 +5,7 @@ import { Route, Redirect } from "react-router-dom";
  * These are the constants used for routing 
  */
 export const __ROUTE_LOGIN = '/login';
+export const __ROUTE_BINGO = '/bingo';
 
 /**
  * Private Routes Constants 
