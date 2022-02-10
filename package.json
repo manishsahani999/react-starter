@@ -11,7 +11,7 @@
     "classnames": "2.2.6",
     "headroom.js": "0.9.4",
     "moment": "2.24.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nouislider": "14.0.2",
     "react": "16.8.6",
     "react-blob": "^2.1.0",
